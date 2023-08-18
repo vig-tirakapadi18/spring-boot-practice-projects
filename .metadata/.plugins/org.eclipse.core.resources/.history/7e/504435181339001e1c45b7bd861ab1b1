@@ -1,0 +1,17 @@
+package studentCrudApp2.entities;
+
+import jakarta.persistence.*;
+
+@Entity
+public class Student {
+	@Id
+	String kodId;
+	String name;
+	String batch;
+	
+	public Student() {
+		super();
+	}
+	
+	
+}

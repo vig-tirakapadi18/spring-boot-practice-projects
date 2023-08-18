@@ -1,0 +1,5 @@
+package studentCrudApp2.repositories;
+
+public interface StudentRepository {
+
+}

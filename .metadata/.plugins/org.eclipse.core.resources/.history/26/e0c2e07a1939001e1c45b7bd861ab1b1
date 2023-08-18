@@ -1,0 +1,16 @@
+package studentCrudApp2.controller;
+
+import org.springframework.beans.factory.annotation.*;
+import org.springframework.stereotype.*;
+import org.springframework.web.bind.annotation.*;
+
+@Controller
+@RequestMapping("/student")
+public class StudentController {
+	@Autowired
+	
+	@PostMapping("/create")
+	public String create() {
+		
+	}
+}

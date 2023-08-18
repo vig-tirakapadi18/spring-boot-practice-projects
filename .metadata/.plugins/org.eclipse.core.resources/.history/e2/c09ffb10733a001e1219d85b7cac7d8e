@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>All Students</title>
+</head>
+<body>
+	<table>
+		<thead>
+			<tr>
+				<th>Kod Id</th>
+				<th>Name</th>
+				<th>Batch</th>
+			</tr>
+		</thead>
+	</table>
+</body>
+</html>

@@ -1,0 +1,16 @@
+package thymeDemo.controller;
+
+import org.springframework.stereotype.*;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
+
+@Controller
+@RequestMapping("/student")
+public class StudentController {
+	
+	@GetMapping("/fun")
+	public String fun(Model model) {
+		model.addAllAttributes("name", "Vighnesh");
+		return "student";
+	}
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;studentCrudApp2/src/main/resources/templates/fetchAll.html&apos; to &apos;fetchAllStudents.html&apos;" description="Rename resource &apos;fetchAll.html&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/resources/templates/fetchAll.html" name="fetchAllStudents.html" stamp="1691998938739" updateReferences="true"/>
+</session>

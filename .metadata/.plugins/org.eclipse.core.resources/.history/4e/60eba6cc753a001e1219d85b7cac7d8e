@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body class="d-flex justify-content-center 100-vh align-items-center">
+	<form action="/student/fetch" method="get">
+		<button type="submit" class="btn btn-success">FETCH ALL</button>
+	</form>
+</body>
+</html>

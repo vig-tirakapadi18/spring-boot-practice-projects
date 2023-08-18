@@ -1,0 +1,24 @@
+package com.skillsCraft.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.skillsCraft.entities.Course;
+import com.skillsCraft.repositories.CourseRepository;
+
+@Service
+public class StudentServiceImplementation implements StudentService {
+	@Autowired
+	CourseRepository cRepo;
+	
+	public List<Course> fetchAllCourses() {
+		return cRepo.findAll();
+	}
+
+	@Override
+	public Course fetchCourse(int cId) {
+		return cRepo.findByCourseId(cId);
+	}
+}

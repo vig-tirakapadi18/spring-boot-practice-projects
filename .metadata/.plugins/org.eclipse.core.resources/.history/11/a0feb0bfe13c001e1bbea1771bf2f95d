@@ -1,0 +1,5 @@
+@charset "ISO-8859-1";
+
+body {
+	background-image: url("https://wallpaperaccess.com/full/3278208.jpg");
+}

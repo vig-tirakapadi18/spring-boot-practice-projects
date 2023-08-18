@@ -1,0 +1,9 @@
+package studentCrudApp2.controller;
+
+import org.springframework.stereotype.*;
+import org.springframework.web.bind.annotation.PostMapping;
+
+@Controller
+public class NavController {
+	@PostMapping("/addStudent")
+}

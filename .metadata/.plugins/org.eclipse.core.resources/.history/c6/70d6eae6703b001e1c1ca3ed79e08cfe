@@ -1,0 +1,20 @@
+package com.skillsCraft.controller;
+
+import org.springframework.stereotype.*;
+import org.springframework.web.bind.annotation.*;
+
+import com.skillsCraft.entities.Users;
+
+@Controller
+public class UsersController {
+	@PostMapping("/addUser")
+	public String addUser(@ModelAttribute Users user) {
+		System.out.println(user);
+		return "login";
+	}
+	
+	@PostMapping("/validateUser")
+	public String validateUser(@RequestParam("email") String email, 
+											@RequestParam("password") String password)
+
+}

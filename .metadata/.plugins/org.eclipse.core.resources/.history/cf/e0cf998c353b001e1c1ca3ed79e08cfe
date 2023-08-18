@@ -1,0 +1,17 @@
+package com.skillsCraft.controller;
+
+import java.util.List;
+
+import jakarta.persistence.*;
+
+@Entity
+public class Users {
+	@Id
+	int id;
+	String username;
+	String email;
+	String password;
+	String role;
+	List<Course> cList;
+
+}

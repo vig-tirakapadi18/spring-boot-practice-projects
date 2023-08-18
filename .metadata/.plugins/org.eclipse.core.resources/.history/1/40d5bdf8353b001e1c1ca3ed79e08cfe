@@ -1,0 +1,15 @@
+package com.skillsCraft.controller;
+
+import jakarta.persistence.*;
+
+@Entity
+public class Lesson {
+	@Id
+	int id;
+	String lName;
+	String lTopics;
+	String lLink;
+	
+	@ManyToOne
+	Course course;
+}

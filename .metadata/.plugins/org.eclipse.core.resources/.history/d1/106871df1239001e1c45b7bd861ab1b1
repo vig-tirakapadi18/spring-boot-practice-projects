@@ -1,0 +1,5 @@
+package studentCrudApp2.entities;
+
+public class Student {
+
+}

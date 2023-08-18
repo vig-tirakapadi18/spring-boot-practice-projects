@@ -1,0 +1,8 @@
+package com.skillsCraft.services;
+
+import com.skillsCraft.entities.Users;
+
+public interface UsersService {
+	String addUser(Users user);
+	String findUserByEmail(String email);
+}

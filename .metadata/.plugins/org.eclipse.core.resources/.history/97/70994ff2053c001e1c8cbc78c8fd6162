@@ -1,0 +1,7 @@
+package com.skillsCraft.services;
+
+import com.skillsCraft.entities.Course;
+
+public interface TrainerService {
+	Course addCourse(Course course);
+}

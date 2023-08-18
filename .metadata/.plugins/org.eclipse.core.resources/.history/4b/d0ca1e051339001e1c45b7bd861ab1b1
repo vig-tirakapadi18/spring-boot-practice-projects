@@ -1,0 +1,8 @@
+package studentCrudApp2.entities;
+
+import jakarta.persistence.*;
+
+@Entity
+public class Student {
+
+}

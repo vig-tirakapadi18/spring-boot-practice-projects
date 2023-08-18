@@ -1,0 +1,19 @@
+package com.skillsCraft.services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.*;
+
+import com.skillsCraft.entities.Course;
+import com.skillsCraft.repositories.TrainerRepository;
+
+@Service
+public class TrainerServiceImplementation implements TrainerService {
+	@Autowired
+	TrainerRepository tRepo;
+	
+	public String addCourse(Course course) {
+		tRepo.save(course);
+		return "Course Added Successfully!";
+	}
+	
+}

@@ -1,0 +1,30 @@
+package studentCrudApp2.services;
+
+import org.springframework.beans.factory.annotation.*;
+
+import studentCrudApp2.entities.Student;
+import studentCrudApp2.repositories.StudentRepository;
+
+public class StudentServiceImplementation implements StudentService {
+	@Autowired
+	StudentRepository repo;
+
+	public String addStudent(Student s) {
+		repo.save(s);
+		return "Student Added!";
+	}
+
+	public Student fetchStudent(String kodId) {
+		return repo.findByKodId(kodId);
+	}
+
+	public String updateStudent(Student s) {
+		repo.save(s);
+		return "Student Updated!";
+	}
+
+	public String deleteStudent(String kodId) {
+		return "Student Deleted!";
+	}
+
+}

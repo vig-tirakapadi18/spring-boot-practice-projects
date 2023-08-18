@@ -1,0 +1,6 @@
+@charset "ISO-8859-1";
+
+.btn {
+	background-color: #14b8a6;
+	color: black;
+}

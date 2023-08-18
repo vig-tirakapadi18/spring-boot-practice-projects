@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Purchase Course</title>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Purchase Course</h1>
+			
+			<table>
+				<thead>
+					<tr>
+						<th>Course ID</th>
+						<th>Course Name</th>
+						<th>Course Price</th>
+						<th>Get this!</th>
+					</tr>
+				</thead>
+			</table>
+		</div>
+	</body>
+</html>

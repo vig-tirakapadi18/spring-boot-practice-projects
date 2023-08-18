@@ -1,0 +1,9 @@
+package com.skillsCraft.entities;
+
+import jakarta.persistence.*;
+
+@Entity
+public class Course {
+	@Id
+	int id;
+}

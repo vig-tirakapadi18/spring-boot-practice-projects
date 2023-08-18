@@ -1,0 +1,7 @@
+package thymeDemo.controller;
+
+public class StudentController {
+	public String fun() {
+		return "student";
+	}
+}

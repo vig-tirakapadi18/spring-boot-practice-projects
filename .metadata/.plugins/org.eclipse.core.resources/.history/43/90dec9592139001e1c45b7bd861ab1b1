@@ -1,0 +1,32 @@
+package studentCrudApp2.controller;
+
+import org.springframework.stereotype.*;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+
+import studentCrudApp2.entities.Student;
+
+@Controller
+public class NavController {
+	@PostMapping("/addStudent")
+	public String addStudent(Student s) {
+		return "addStudent";
+	}
+	
+	@GetMapping("/fetchStudent")
+	public String fetchStudent(String kodId) {
+		return "fetchStudent";
+	}
+	
+	@PutMapping("/updateStudent")
+	public String updateStudent(Student s) {
+		return "updateStudent";
+	}
+	
+	@DeleteMapping("/deleteStudent")
+	public String deleteStudent(String kodId) {
+		return "deleteStudent";
+	}
+}

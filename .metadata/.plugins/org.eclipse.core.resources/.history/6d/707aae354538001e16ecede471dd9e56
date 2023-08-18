@@ -1,0 +1,11 @@
+package thymeDemo.controller;
+
+import org.springframework.web.bind.annotation.*;
+
+public class StudentController {
+	
+	@GetMapping
+	public String fun() {
+		return "student";
+	}
+}

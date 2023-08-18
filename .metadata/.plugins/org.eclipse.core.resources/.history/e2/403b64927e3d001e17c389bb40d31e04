@@ -1,0 +1,9 @@
+package com.skillsCraft.services;
+
+import java.util.List;
+
+import com.skillsCraft.entities.Course;
+
+public interface StudentService {
+	List<Course> fetchAllCourses();
+}

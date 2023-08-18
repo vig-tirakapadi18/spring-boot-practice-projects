@@ -1,0 +1,20 @@
+package studentCrudApp2.controller;
+
+import org.springframework.beans.factory.annotation.*;
+import org.springframework.stereotype.*;
+import org.springframework.web.bind.annotation.*;
+
+import studentCrudApp2.entities.Student;
+import studentCrudApp2.services.StudentService;
+
+@Controller
+@RequestMapping("/student")
+public class StudentController {
+	@Autowired
+	StudentService service;
+	
+	@PostMapping("/create")
+	public String create(Student s) {
+		return service.addStudent(s);
+	}
+}

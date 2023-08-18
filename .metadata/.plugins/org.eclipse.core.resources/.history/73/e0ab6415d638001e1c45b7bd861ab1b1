@@ -1,0 +1,14 @@
+package thymeDemo.controller;
+
+import org.springframework.stereotype.*;
+import org.springframework.web.bind.annotation.*;
+
+@Controller
+@RequestMapping("/student")
+public class StudentController {
+	
+	@GetMapping("/fun")
+	public String fun() {
+		return "student";
+	}
+}

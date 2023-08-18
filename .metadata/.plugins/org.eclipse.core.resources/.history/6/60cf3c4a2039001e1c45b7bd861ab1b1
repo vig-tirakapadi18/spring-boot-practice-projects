@@ -1,0 +1,3 @@
+server.port=9999
+
+spring.datasource.url:jdbc:mysql://localhost/java_rev

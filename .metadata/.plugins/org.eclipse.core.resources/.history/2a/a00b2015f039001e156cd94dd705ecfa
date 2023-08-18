@@ -1,0 +1,51 @@
+package studentCrudApp2.controller;
+
+import org.springframework.beans.factory.annotation.*;
+import org.springframework.stereotype.*;
+import org.springframework.web.bind.annotation.*;
+
+import studentCrudApp2.entities.Student;
+import studentCrudApp2.services.StudentService;
+
+@Controller
+@RequestMapping("/student")
+public class StudentController {
+	@Autowired
+	StudentService service;
+	
+//	@PostMapping("/create")
+//	public String create(Student s) {
+//		return service.addStudent(s);
+//	}
+	
+//	@PostMapping("/create")
+//	public String create(@RequestParam("kodId") String kodId, 
+//									@RequestParam("name") String name,
+//									@RequestParam("batch") String batch) {
+//		Student s = new Student(kodId, name, batch);
+//		service.addStudent(s);
+//		return "test";
+//	}
+	
+	@PostMapping("/create")
+	public String create(@ModelAttribute Student s) {
+		Student s = new Student(s);
+		service.addStudent(s);
+		return "test";
+	}
+	
+	@GetMapping("/fetch")
+	public Student fetch(String kodId) {
+		return service.fetchStudent(kodId);
+	}
+	
+	@PutMapping("/update")
+	public String update(Student s) {
+		return service.updateStudent(s);
+	}
+	
+	@DeleteMapping("/delete")
+	public String delete(String kodId) {
+		return service.deleteStudent(kodId);
+	}
+}

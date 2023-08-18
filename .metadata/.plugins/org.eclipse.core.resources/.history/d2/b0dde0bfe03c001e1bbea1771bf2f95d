@@ -1,0 +1,5 @@
+@charset "ISO-8859-1";
+
+body {
+	background-image: url("https://t4.ftcdn.net/jpg/02/49/82/33/240_F_249823322_RrRYwX9dGLJv9ftywC945GLuL4XgaDGr.jpg");
+}

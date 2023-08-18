@@ -1,0 +1,36 @@
+package com.skillsCraft.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.*;
+import org.springframework.web.bind.annotation.*;
+
+import com.skillsCraft.entities.Users;
+import com.skillsCraft.services.UsersService;
+
+@Controller
+public class UsersController {
+	
+	@Autowired
+	UsersService uService;
+	
+	@PostMapping("/addUser")
+	public String addUser(@ModelAttribute Users user) {
+		uService.addUser(user);
+		return "login";
+	}
+	
+	@PostMapping("/validateUser")
+	public String validateUser(@RequestParam("email") String email, 
+											@RequestParam("password") String password, 
+											@RequestParam("role") String role) {
+		Users user = uService.findUserByEmail(email);
+		if (password.equals(user.getPassword())) {
+			if(role.equals(user.getRole()) == "student") {
+				
+			}
+		} else {
+			return "login";
+		}
+	}
+
+}

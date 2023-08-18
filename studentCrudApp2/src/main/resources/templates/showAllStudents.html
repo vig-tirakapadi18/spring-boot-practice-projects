@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>All Students</title>
+</head>
+<body>
+	<table border>
+		<thead>
+			<tr>
+				<th>KOD ID</th>
+				<th>NAME</th>
+				<th>BATCH</th>
+			</tr>
+		</thead>
+		
+		<tbody>
+			<tr th:each="stud:${sList}">
+				<td th:text="${stud.kodId}"></td>
+				<td th:text="${stud.name}"></td>
+				<td th:text="${stud.batch}"></td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>

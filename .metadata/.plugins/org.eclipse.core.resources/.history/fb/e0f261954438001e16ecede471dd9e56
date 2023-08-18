@@ -1,0 +1,13 @@
+package thymeDemo.entity;
+
+public class Student {
+	String kodId;
+	String name;
+	String batch;
+	
+	public Student() {
+		super();
+	}
+	
+	
+}

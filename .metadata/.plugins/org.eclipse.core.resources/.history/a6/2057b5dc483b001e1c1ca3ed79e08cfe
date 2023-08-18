@@ -1,0 +1,5 @@
+package com.skillsCraft.entities;
+
+public class Comment {
+
+}

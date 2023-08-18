@@ -1,0 +1,14 @@
+package com.skillsCraft.services;
+
+import org.springframework.stereotype.*;
+
+import com.skillsCraft.entities.Course;
+
+@Service
+public class TrainerServiceImplementation implements TrainerService {
+	public String addCourse(Course course) {
+		
+		return "Course Added Successfully!";
+	}
+	
+}

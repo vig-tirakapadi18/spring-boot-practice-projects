@@ -1,0 +1,31 @@
+package com.skillsCraft.controller;
+
+import java.util.List;
+
+import jakarta.persistence.*;
+
+@Entity
+public class Users {
+	@Id
+	int id;
+	String username;
+	String email;
+	String password;
+	String role;
+	List<Course> cList;
+	
+	public Users() {
+		super();
+	}
+	public Users(int id, String username, String email, String password, String role, List<Course> cList) {
+		super();
+		this.id = id;
+		this.username = username;
+		this.email = email;
+		this.password = password;
+		this.role = role;
+		this.cList = cList;
+	}
+
+	
+}

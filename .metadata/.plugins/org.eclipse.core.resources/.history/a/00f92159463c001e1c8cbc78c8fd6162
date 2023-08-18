@@ -1,0 +1,10 @@
+package com.skillsCraft.services;
+
+import java.util.List;
+
+import com.skillsCraft.entities.Course;
+
+public interface TrainerService {
+	String addCourse(Course course);
+	List<Course> fetchAllCourses();
+}

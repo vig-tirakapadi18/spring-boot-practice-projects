@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Student</title>
+	</head>
+	<body>
+		<h1>Displaying Simple Values: </h1>
+		<h2 th:text="${name}"></h2>
+		
+		<h1>Displaying Object Values: </h1>
+		<h2 th:text="${s.kodId}"></h2>
+		<h2 th:text="${s.name}"></h2>
+		<h2 th:text="${s.batch}"></h2>
+		
+		<h1>Displaying 1 Object data in tabular form: </h1>
+		<table border>
+			<thead>
+				<tr>
+					<th>Kod ID</th>
+					<th>Name</th>
+					<th>Batch</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td th:text="${s.kodId}"></td>
+					<td th:text="${s.name}"></td>
+					<td th:text="${s.batch}"></td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<h1>Displaying multiple Object values in tabular form: </h1>
+		<table border="1">
+			<thead>
+				<tr>
+					<th>Kod ID</th>
+					<th>Name</th>
+					<th>Batch</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="s:${sList}">
+					<td th:text="${s.kodId}"></td>
+					<td th:text="${s.name}"></td>
+					<td th:text="${s.batch}"></td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>

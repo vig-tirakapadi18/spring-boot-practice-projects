@@ -1,0 +1,76 @@
+package com.skillsCraft.entities;
+
+
+
+import jakarta.persistence.*;
+
+@Entity
+public class Lesson {
+	@Id
+	int lId;
+	String lName;
+	String lTopics;
+	String lLink;
+	
+	@ManyToOne
+	Course course;
+
+	public Lesson() {
+		super();
+	}
+
+	public Lesson(int lId, String lName, String lTopics, String lLink, Course course) {
+		super();
+		this.lId = lId;
+		this.lName = lName;
+		this.lTopics = lTopics;
+		this.lLink = lLink;
+		this.course = course;
+	}
+
+	public int getlId() {
+		return lId;
+	}
+
+	public void setlId(int lId) {
+		this.lId = lId;
+	}
+
+	public String getlName() {
+		return lName;
+	}
+
+	public void setlName(String lName) {
+		this.lName = lName;
+	}
+
+	public String getlTopics() {
+		return lTopics;
+	}
+
+	public void setlTopics(String lTopics) {
+		this.lTopics = lTopics;
+	}
+
+	public String getlLink() {
+		return lLink;
+	}
+
+	public void setlLink(String lLink) {
+		this.lLink = lLink;
+	}
+
+	public Course getCourse() {
+		return course;
+	}
+
+	public void setCourse(Course course) {
+		this.course = course;
+	}
+
+	@Override
+	public String toString() {
+		return "Lesson [lId=" + lId + ", lName=" + lName + ", lTopics=" + lTopics + ", lLink=" + lLink + ", course="
+				+ course + "]";
+	}
+}

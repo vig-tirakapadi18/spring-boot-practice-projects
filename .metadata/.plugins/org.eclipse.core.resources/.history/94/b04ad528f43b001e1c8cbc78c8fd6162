@@ -1,0 +1,20 @@
+package com.skillsCraft.services;
+
+import org.springframework.beans.factory.annotation.*;
+import org.springframework.stereotype.*;
+
+import com.skillsCraft.entities.Users;
+import com.skillsCraft.repositories.UsersRepository;
+
+@Service
+public class UsersServiceImplementation 
+						implements UsersService{
+	
+	@Autowired
+	UsersRepository uRepo;
+	
+	public String addUser(Users user) {
+		uRepo.save(user);
+		return "User Added Successfully!";
+	}
+}

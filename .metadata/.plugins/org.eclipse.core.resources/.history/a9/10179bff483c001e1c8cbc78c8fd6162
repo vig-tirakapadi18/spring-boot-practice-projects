@@ -1,0 +1,5 @@
+package com.skillsCraft.repositories;
+
+public interface LessonRepository {
+
+}

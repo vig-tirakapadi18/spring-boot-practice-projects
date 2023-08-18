@@ -1,0 +1,5 @@
+package thymeDemo.entity;
+
+public class Student {
+
+}

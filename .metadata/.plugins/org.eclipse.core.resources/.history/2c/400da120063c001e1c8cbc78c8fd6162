@@ -1,0 +1,8 @@
+package com.skillsCraft.services;
+
+import org.springframework.stereotype.*;
+
+@Service
+public class TrainerServiceImplementation implements TrainerService {
+	
+}

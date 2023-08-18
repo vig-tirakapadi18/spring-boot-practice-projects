@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="ISO-8859-1" />
+    <title>Register</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <link rel="stylesheet" th:href="@{/css/register.css}" />
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <div>
+          <input
+            type="text"
+            name="username"
+            placeholder="Username" />
+        </div>
+        <div>
+          <input
+            type="email"
+            name="email"
+            placeholder="Email" />
+        </div>
+        <div>
+          <input
+            type="password"
+            class="form-control"
+            placeholder="Password" />
+        </div>
+        <button
+          type="submit"
+          class="btn">
+          Submit
+        </button>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Trainer Home</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+  </head>
+  <body>
+		<a href="/addCourse">
+			<button class="btn-dark">Add Course</button>
+		</a>
+		
+		<a href="/addLesson">
+			<button class="btn-dark">Add Lesson</button>
+		</a>
+		
+		<a href="/viewCourse">
+			<button class="btn-dark">View Course</button>
+		</a>
+  </body>
+</html>

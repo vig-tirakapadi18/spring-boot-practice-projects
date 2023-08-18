@@ -1,0 +1,19 @@
+package com.skillsCraft.controller;
+
+import java.util.List;
+
+import jakarta.persistence.*;
+
+@Entity
+public class Course {
+	@Id
+	int cId;
+	String cName;
+	int cPrice;
+	
+	@OneToMany
+	List<Lesson> lList;
+	
+	@ManyToMany
+	List<Users> uList;
+}

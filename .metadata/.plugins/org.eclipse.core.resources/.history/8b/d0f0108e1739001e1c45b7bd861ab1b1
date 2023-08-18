@@ -1,0 +1,10 @@
+package studentCrudApp2.services;
+
+import studentCrudApp2.entities.Student;
+
+public interface StudentService {
+	String addStudent(Student s);
+	String fetchStudent(String kodId);
+	String updateStudent(Student s);
+	String deleteStudent(String kodId);
+}

@@ -1,0 +1,41 @@
+package com.skillsCraft.controller;
+
+import jakarta.persistence.*;
+
+@Entity
+public class Comment {
+	@Id
+	int commId;
+	String comment;
+	
+	public Comment() {
+		super();
+	}
+
+	public Comment(int commId, String comment) {
+		super();
+		this.commId = commId;
+		this.comment = comment;
+	}
+
+	public int getCommId() {
+		return commId;
+	}
+
+	public void setCommId(int commId) {
+		this.commId = commId;
+	}
+
+	public String getComment() {
+		return comment;
+	}
+
+	public void setComment(String comment) {
+		this.comment = comment;
+	}
+
+	@Override
+	public String toString() {
+		return "Comment [commId=" + commId + ", comment=" + comment + "]";
+	}
+}
