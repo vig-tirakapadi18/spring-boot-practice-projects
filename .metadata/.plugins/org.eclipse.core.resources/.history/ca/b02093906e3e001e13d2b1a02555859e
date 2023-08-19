@@ -1,0 +1,6 @@
+@charset "ISO-8859-1";
+
+div iframe {
+	width: 500px;
+	height: 400px;
+}

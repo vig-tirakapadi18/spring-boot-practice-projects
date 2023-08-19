@@ -2,8 +2,7 @@ package com.skillsCraft.services;
 
 import java.util.List;
 
-import com.skillsCraft.entities.Course;
-import com.skillsCraft.entities.Lesson;
+import com.skillsCraft.entities.*;
 
 public interface StudentService {
 	List<Course> fetchAllCourses();

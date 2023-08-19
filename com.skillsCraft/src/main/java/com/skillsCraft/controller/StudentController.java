@@ -2,17 +2,13 @@ package com.skillsCraft.controller;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
+import org.springframework.beans.factory.annotation.*;
+import org.springframework.stereotype.*;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
-import com.skillsCraft.entities.Course;
-import com.skillsCraft.entities.Lesson;
-import com.skillsCraft.entities.Users;
-import com.skillsCraft.services.StudentService;
-import com.skillsCraft.services.UsersService;
+import com.skillsCraft.entities.*;
+import com.skillsCraft.services.*;
 
 import jakarta.servlet.http.HttpSession;
 
@@ -25,7 +21,7 @@ public class StudentController {
 	UsersService uService;
 	
 	@GetMapping("/purchaseCourse")
-	public String purchase(Model model) {
+	public String purchaseCourse(Model model) {
 		List<Course> cList = sService.fetchAllCourses();
 		model.addAttribute("cList" ,cList);
 		return "purchaseCourse";

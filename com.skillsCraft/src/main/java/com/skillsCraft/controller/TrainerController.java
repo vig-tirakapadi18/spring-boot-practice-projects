@@ -19,7 +19,7 @@ public class TrainerController {
 	@PostMapping("/addCourse")
 	public String addCourse(@ModelAttribute Course course) {
 		tService.addCourse(course);
-		return "addCourse";
+		return "trainerHome";
 	}
 	
 	@GetMapping("/viewCourses")

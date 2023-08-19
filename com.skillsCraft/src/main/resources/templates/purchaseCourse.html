@@ -33,7 +33,7 @@
 							<form id="payment-form">
 								<input type="hidden" class="email" th:value="${session.loggedInUser.email}" />
 								<input type="hidden" class="cId" th:value="${course.cId}"	/>				
-								<button type="submit" id="pay-button" class="btn btn-primary" th:data-amount="${course.cPrice}">BUY</button>
+								<button type="submit" id="pay-button" class="btn btn-primary buy-button" th:data-amount="${course.cPrice}">BUY</button>
 							</form>
 						</td>
 					</tr>

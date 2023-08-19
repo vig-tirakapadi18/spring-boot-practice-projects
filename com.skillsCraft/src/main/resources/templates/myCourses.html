@@ -29,7 +29,9 @@
 						<td th:text="${course.cPrice}"></td>
 						<td>
 							<span th:each="lesson, lessonStat : ${course.lList}">
-								<a th:href="@{/viewLesson(lessonId=${lesson.lId})}" th:text="${lesson.lName}"></a>
+								<a th:href="@{/viewLesson(lId=${lesson.lId})}" th:text="${lesson.lName}">
+									<span th:if="${!lessonStat.last}">, </span>
+								</a>
 							</span>
 						</td>
 					</tr>

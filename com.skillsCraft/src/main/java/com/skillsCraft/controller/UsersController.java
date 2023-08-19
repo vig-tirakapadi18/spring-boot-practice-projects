@@ -34,9 +34,9 @@ public class UsersController {
 		Users user = uService.findUserByEmail(email);
 		String role = user.getRole();
 		
-		session.setAttribute("loggedInUser", user);
-		
 		if (password.equals(user.getPassword())) {
+			session.setAttribute("loggedInUser", user);
+			
 			if(role.equals("student")) {
 				return "studentHome";
 			} else {
