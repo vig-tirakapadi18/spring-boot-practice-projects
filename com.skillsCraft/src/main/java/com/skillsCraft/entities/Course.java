@@ -6,72 +6,60 @@ import jakarta.persistence.*;
 @Entity
 public class Course {
 	@Id
-	int cId;
-	String cName;
-	int cPrice;
+	int courseId;
+	String courseName;
+	int coursePrice;
 	
 	@OneToMany
-	List<Lesson> lList;
+	List<Lesson> lessonList;
 	
 	@ManyToMany
-	List<Users> uList;
+	List<Users> userList;
 
 	public Course() {
 		super();
 	}
-
-	public Course(int cId, String cName, int cPrice, List<Lesson> lList, List<Users> uList) {
+	public Course(int courseId, String courseName, int coursePrice, List<Lesson> lessonList, List<Users> userList) {
 		super();
-		this.cId = cId;
-		this.cName = cName;
-		this.cPrice = cPrice;
-		this.lList = lList;
-		this.uList = uList;
+		this.courseId = courseId;
+		this.courseName = courseName;
+		this.coursePrice = coursePrice;
+		this.lessonList = lessonList;
+		this.userList = userList;
 	}
-
-	public int getcId() {
-		return cId;
+	public int getCourseId() {
+		return courseId;
 	}
-
-	public void setcId(int cId) {
-		this.cId = cId;
+	public void setCourseId(int courseId) {
+		this.courseId = courseId;
 	}
-
-	public String getcName() {
-		return cName;
+	public String getCourseName() {
+		return courseName;
 	}
-
-	public void setcName(String cName) {
-		this.cName = cName;
+	public void setCourseName(String courseName) {
+		this.courseName = courseName;
 	}
-
-	public int getcPrice() {
-		return cPrice;
+	public int getCoursePrice() {
+		return coursePrice;
 	}
-
-	public void setcPrice(int cPrice) {
-		this.cPrice = cPrice;
+	public void setCoursePrice(int coursePrice) {
+		this.coursePrice = coursePrice;
 	}
-
-	public List<Lesson> getlList() {
-		return lList;
+	public List<Lesson> getLessonList() {
+		return lessonList;
 	}
-
-	public void setlList(List<Lesson> lList) {
-		this.lList = lList;
+	public void setLessonList(List<Lesson> lessonList) {
+		this.lessonList = lessonList;
 	}
-
-	public List<Users> getuList() {
-		return uList;
+	public List<Users> getUserList() {
+		return userList;
 	}
-
-	public void setuList(List<Users> uList) {
-		this.uList = uList;
+	public void setUserList(List<Users> userList) {
+		this.userList = userList;
 	}
-
 	@Override
 	public String toString() {
-		return "Course [cId=" + cId + ", cName=" + cName + ", cPrice=" + cPrice + ", lList=" + (lList == null ? "null" : lList.size()) + ", uList="
-				+ (uList == null ? "null" : uList.size()) + "]";
+		return "Course [courseId=" + courseId + ", courseName=" + courseName + ", coursePrice=" + coursePrice
+				+ ", lessonList=" + lessonList + ", userList=" + userList + "]";
 	}
 }

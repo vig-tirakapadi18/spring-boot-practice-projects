@@ -33,6 +33,10 @@ public class UsersController {
 											HttpSession session) {
 		Users user = uService.findUserByEmail(email);
 		String role = user.getRole();
+
+		if(role == null) {
+			return "login";
+		}
 		
 		if (password.equals(user.getPassword())) {
 			session.setAttribute("loggedInUser", user);

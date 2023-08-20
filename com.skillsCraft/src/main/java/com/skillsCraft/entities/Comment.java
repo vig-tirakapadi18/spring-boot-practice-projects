@@ -5,37 +5,31 @@ import jakarta.persistence.*;
 @Entity
 public class Comment {
 	@Id
-	int commId;
+	int commentId;
 	String comment;
 	
 	public Comment() {
 		super();
 	}
-
-	public Comment(int commId, String comment) {
+	public Comment(int commentId, String comment) {
 		super();
-		this.commId = commId;
+		this.commentId = commentId;
 		this.comment = comment;
 	}
-
-	public int getCommId() {
-		return commId;
+	public int getCommentId() {
+		return commentId;
 	}
-
-	public void setCommId(int commId) {
-		this.commId = commId;
+	public void setCommentId(int commentId) {
+		this.commentId = commentId;
 	}
-
 	public String getComment() {
 		return comment;
 	}
-
 	public void setComment(String comment) {
 		this.comment = comment;
 	}
-
 	@Override
 	public String toString() {
-		return "Comment [commId=" + commId + ", comment=" + comment + "]";
+		return "Comment [commentId=" + commentId + ", comment=" + comment + "]";
 	}
 }

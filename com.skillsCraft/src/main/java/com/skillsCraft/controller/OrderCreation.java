@@ -24,8 +24,8 @@ public class OrderCreation {
 	@ResponseBody
 	public String takeOrder(@RequestParam int amount, 
 										@RequestParam String email, 
-										@RequestParam int cId) {
-		mapCourseAndUser(email, cId);
+										@RequestParam int courseId) {
+		mapCourseAndUser(email, courseId);
 		
 		Order order = null;
 		try {
@@ -43,12 +43,12 @@ public class OrderCreation {
 		return order.toString();
 	}
 	
-	public void mapCourseAndUser(String email, int cId) {
+	public void mapCourseAndUser(String email, int courseId) {
 		Users user = uService.findUserByEmail(email);
-		Course course = sService.fetchCourse(cId);
+		Course course = sService.fetchCourse(courseId);
 		
-		user.getcList().add(course);
-		course.getuList().add(user);
+		user.getCourseList().add(course);
+		course.getUserList().add(user);
 		
 		tService.saveCourse(course);
 		uService.saveUsers(user);

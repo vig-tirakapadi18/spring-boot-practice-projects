@@ -22,11 +22,11 @@ public class StudentServiceImplementation implements StudentService {
 		return cRepo.findAll();
 	}
 
-	public Course fetchCourse(int cId) {
-		return cRepo.findBycId(cId);
+	public Course fetchCourse(int courseId) {
+		return cRepo.findByCourseId(courseId);
 	}
 
-	public Lesson getLesson(int lId) {
-		return lRepo.findBylId(lId);
+	public Lesson getLesson(int lessonId) {
+		return lRepo.findByLessonId(lessonId);
 	}
 }

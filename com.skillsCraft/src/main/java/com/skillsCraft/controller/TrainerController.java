@@ -24,8 +24,8 @@ public class TrainerController {
 	
 	@GetMapping("/viewCourses")
 	public String viewCourses(Model model) {
-		List<Course> cList = tService.fetchAllCourses();
-		model.addAttribute("cList",cList);
+		List<Course> courseList = tService.fetchAllCourses();
+		model.addAttribute("courseList",courseList);
 		return "courses";
 	}
 	
@@ -33,7 +33,7 @@ public class TrainerController {
 	public String addLesson(@ModelAttribute Lesson lesson) {
 		tService.addLesson(lesson);
 		Course course = lesson.getCourse();
-		course.getlList().add(lesson);
+		course.getLessonList().add(lesson);
 		tService.saveCourse(course);
 		return "trainerHome";
 	}

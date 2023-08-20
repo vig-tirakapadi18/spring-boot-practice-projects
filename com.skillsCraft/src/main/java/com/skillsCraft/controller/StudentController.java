@@ -22,8 +22,8 @@ public class StudentController {
 	
 	@GetMapping("/purchaseCourse")
 	public String purchaseCourse(Model model) {
-		List<Course> cList = sService.fetchAllCourses();
-		model.addAttribute("cList" ,cList);
+		List<Course> courseList = sService.fetchAllCourses();
+		model.addAttribute("courseList" ,courseList);
 		return "purchaseCourse";
 	}
 	
@@ -33,21 +33,21 @@ public class StudentController {
 		String email = loggedUser.getEmail();
 		Users user = uService.findUserByEmail(email);
 		
-		List<Course> cList = user.getcList();
-		model.addAttribute("cList", cList);
+		List<Course> courseList = user.getCourseList();
+		model.addAttribute("courseList", courseList);
 		return "myCourses";
 	}
 	
 	@GetMapping("/viewLesson")
-	public String viewLesson(@RequestParam("lId") int lId, 
+	public String viewLesson(@RequestParam("lessonId") int lessonId, 
 											Model model, 
 											HttpSession session) {
-		Lesson lesson = sService.getLesson(lId);
+		Lesson lesson = sService.getLesson(lessonId);
 		
-		String youtubeUrl = lesson.getlLink();
+		String youtubeUrl = lesson.getLessonLink();
 		
 		String videoId = youtubeUrl.substring(youtubeUrl.indexOf("=") + 1);
-		lesson.setlLink(videoId);
+		lesson.setLessonLink(videoId);
 		
 		model.addAttribute("lesson", lesson);
 		

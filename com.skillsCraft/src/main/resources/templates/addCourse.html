@@ -6,14 +6,17 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0" />
     <title>Add Course</title>
-
+    <link
+      rel="icon"
+      type="image/x-icon"
+      th:href="@{/images/favicon.ico}" />
     <link
       rel="stylesheet"
       th:href="@{/css/style.css}" />
-      
-     <link
+
+    <link
       rel="stylesheet"
-      th:href="@{/css/addCourse.css}" /> 
+      th:href="@{/css/addCourse.css}" />
   </head>
   <body>
     <div class="container">
@@ -22,18 +25,22 @@
         method="post">
         <input
           type="text"
-          name="cId"
+          name="courseId"
           placeholder="Course ID" />
         <input
           type="text"
-          name="cName"
+          name="courseName"
           placeholder="Course Name" />
         <input
           type="text"
-          name="cPrice"
+          name="coursePrice"
           placeholder="Course Price" />
 
-        <button type="submit" class="btn btn-primary">Add Course</button>
+        <button
+          type="submit"
+          class="btn btn-primary">
+          Add Course
+        </button>
       </form>
     </div>
   </body>

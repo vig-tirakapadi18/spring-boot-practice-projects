@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.skillsCraft.entities.Lesson;
 
 public interface LessonRepository extends JpaRepository<Lesson, Integer> {
-	Lesson findBylId(int lId);
+	Lesson findByLessonId(int lessonId);
 }

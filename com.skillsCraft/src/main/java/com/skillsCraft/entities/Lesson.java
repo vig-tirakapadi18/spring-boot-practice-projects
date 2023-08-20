@@ -5,10 +5,10 @@ import jakarta.persistence.*;
 @Entity
 public class Lesson {
 	@Id
-	int lId;
-	String lName;
-	String lTopics;
-	String lLink;
+	int lessonId;
+	String lessonName;
+	String lessonTopics;
+	String lessonLink;
 	
 	@ManyToOne
 	Course course;
@@ -16,59 +16,47 @@ public class Lesson {
 	public Lesson() {
 		super();
 	}
-
-	public Lesson(int lId, String lName, String lTopics, String lLink, Course course) {
+	public Lesson(int lessonId, String lessonName, String lessonTopics, String lessonLink, Course course) {
 		super();
-		this.lId = lId;
-		this.lName = lName;
-		this.lTopics = lTopics;
-		this.lLink = lLink;
+		this.lessonId = lessonId;
+		this.lessonName = lessonName;
+		this.lessonTopics = lessonTopics;
+		this.lessonLink = lessonLink;
 		this.course = course;
 	}
-
-	public int getlId() {
-		return lId;
+	public int getLessonId() {
+		return lessonId;
 	}
-
-	public void setlId(int lId) {
-		this.lId = lId;
+	public void setLessonId(int lessonId) {
+		this.lessonId = lessonId;
 	}
-
-	public String getlName() {
-		return lName;
+	public String getLessonName() {
+		return lessonName;
 	}
-
-	public void setlName(String lName) {
-		this.lName = lName;
+	public void setLessonName(String lessonName) {
+		this.lessonName = lessonName;
 	}
-
-	public String getlTopics() {
-		return lTopics;
+	public String getLessonTopics() {
+		return lessonTopics;
 	}
-
-	public void setlTopics(String lTopics) {
-		this.lTopics = lTopics;
+	public void setLessonTopics(String lessonTopics) {
+		this.lessonTopics = lessonTopics;
 	}
-
-	public String getlLink() {
-		return lLink;
+	public String getLessonLink() {
+		return lessonLink;
 	}
-
-	public void setlLink(String lLink) {
-		this.lLink = lLink;
+	public void setLessonLink(String lessonLink) {
+		this.lessonLink = lessonLink;
 	}
-
 	public Course getCourse() {
 		return course;
 	}
-
 	public void setCourse(Course course) {
 		this.course = course;
 	}
-
 	@Override
 	public String toString() {
-		return "Lesson [lId=" + lId + ", lName=" + lName + ", lTopics=" + lTopics + ", lLink=" + lLink + ", course="
-				+ course + "]";
+		return "Lesson [lessonId=" + lessonId + ", lessonName=" + lessonName + ", lessonTopics=" + lessonTopics
+				+ ", lessonLink=" + lessonLink + ", course=" + course + "]";
 	}
 }
